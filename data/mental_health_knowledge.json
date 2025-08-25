@@ -1,0 +1,20 @@
+[
+  {
+    "id": "kb_1",
+    "title": "Box Breathing (4-4-4-4)",
+    "tags": ["breathing", "anxiety"],
+    "content": "Inhale 4s, hold 4s, exhale 4s, hold 4s. Repeat 4 cycles to reduce stress."
+  },
+  {
+    "id": "kb_2",
+    "title": "5-4-3-2-1 Grounding",
+    "tags": ["grounding", "panic"],
+    "content": "Name 5 things you see, 4 you feel, 3 you hear, 2 you smell, 1 you taste."
+  },
+  {
+    "id": "kb_3",
+    "title": "Reframing Negative Thoughts (CBT)",
+    "tags": ["cbt", "thoughts"],
+    "content": "Identify the negative thought, gather evidence for/against, and reframe it more realistically."
+  }
+]

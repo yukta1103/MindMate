@@ -1,0 +1,42 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env/
+.venv/
+
+# IDE / editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Data and models (large / generated files)
+data/*
+!data/download_data.py
+!data/mental_health_*.json
+
+models/*
+
+# Logs & checkpoints
+*.log
+*.ckpt
+*.pt
+*.bin
+*.h5
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Environment & dependencies
+requirements.lock
+Pipfile.lock
+poetry.lock

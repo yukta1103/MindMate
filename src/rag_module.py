@@ -11,10 +11,15 @@ class RagRetriever:
                  index_path="data/kb_index.faiss", normalize=True):
         self.kb_path = kb_path
         self.index_path = index_path
+        print(f"📚 Initializing RAG retriever...")
+        print(f"   Loading embedding model: {embed_model_name}")
         self.model = SentenceTransformer(embed_model_name)
         self.normalize = normalize
         self.docs, self.doc_texts = self._load_kb()
+        print(f"✓ Loaded {len(self.docs)} knowledge base entries")
         self.index = self._load_or_build_index()
+        print(f"✓ RAG retriever ready!")
+
 
     def _load_kb(self):
         with open(self.kb_path, "r", encoding="utf-8") as f:
@@ -30,13 +35,16 @@ class RagRetriever:
 
     def _load_or_build_index(self):
         if os.path.exists(self.index_path):
+            print(f"   Loading existing FAISS index from {self.index_path}")
             index = faiss.read_index(self.index_path)
             return index
+        print(f"   Building new FAISS index...")
         embs = self._embed(self.doc_texts)
         dim = embs.shape[1]
         index = faiss.IndexFlatIP(dim)  # cosine if normalized
         index.add(embs)
         faiss.write_index(index, self.index_path)
+        print(f"   ✓ Index saved to {self.index_path}")
         return index
 
     def search(self, query, k=3):

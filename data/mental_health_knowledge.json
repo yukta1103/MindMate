@@ -2,19 +2,181 @@
   {
     "id": "kb_1",
     "title": "Box Breathing (4-4-4-4)",
-    "tags": ["breathing", "anxiety"],
-    "content": "Inhale 4s, hold 4s, exhale 4s, hold 4s. Repeat 4 cycles to reduce stress."
+    "tags": [
+      "breathing",
+      "anxiety",
+      "stress"
+    ],
+    "content": "Inhale for 4 seconds, hold for 4 seconds, exhale for 4 seconds, hold for 4 seconds. Repeat 4 cycles to reduce stress and anxiety."
   },
   {
     "id": "kb_2",
-    "title": "5-4-3-2-1 Grounding",
-    "tags": ["grounding", "panic"],
-    "content": "Name 5 things you see, 4 you feel, 3 you hear, 2 you smell, 1 you taste."
+    "title": "5-4-3-2-1 Grounding Technique",
+    "tags": [
+      "grounding",
+      "panic",
+      "anxiety"
+    ],
+    "content": "Name 5 things you see, 4 things you can touch, 3 things you hear, 2 things you smell, and 1 thing you taste. This helps ground you in the present moment."
   },
   {
     "id": "kb_3",
     "title": "Reframing Negative Thoughts (CBT)",
-    "tags": ["cbt", "thoughts"],
-    "content": "Identify the negative thought, gather evidence for/against, and reframe it more realistically."
+    "tags": [
+      "cbt",
+      "thoughts",
+      "depression"
+    ],
+    "content": "Identify the negative thought, gather evidence for and against it, and reframe it more realistically. Ask yourself: Is this thought based on facts or feelings?"
+  },
+  {
+    "id": "kb_4",
+    "title": "Progressive Muscle Relaxation",
+    "tags": [
+      "relaxation",
+      "stress",
+      "anxiety"
+    ],
+    "content": "Tense each muscle group for 5 seconds, then release. Start with your toes and work up to your head. This reduces physical tension and promotes relaxation."
+  },
+  {
+    "id": "kb_5",
+    "title": "Sleep Hygiene Basics",
+    "tags": [
+      "sleep",
+      "routine",
+      "wellness"
+    ],
+    "content": "Maintain a consistent sleep schedule, avoid screens 1 hour before bed, keep your bedroom cool and dark, and avoid caffeine after 2 PM."
+  },
+  {
+    "id": "kb_6",
+    "title": "Mindful Walking",
+    "tags": [
+      "mindfulness",
+      "exercise",
+      "stress"
+    ],
+    "content": "Take a 10-minute walk focusing on each step, your breathing, and your surroundings. Notice colors, sounds, and sensations without judgment."
+  },
+  {
+    "id": "kb_7",
+    "title": "Journaling for Emotional Processing",
+    "tags": [
+      "journaling",
+      "emotions",
+      "self-reflection"
+    ],
+    "content": "Write for 10-15 minutes about your thoughts and feelings without censoring. This helps process emotions and gain clarity."
+  },
+  {
+    "id": "kb_8",
+    "title": "Social Connection",
+    "tags": [
+      "social",
+      "support",
+      "loneliness"
+    ],
+    "content": "Reach out to a friend or family member, even briefly. Social connection is vital for mental health. A simple text or call can make a difference."
+  },
+  {
+    "id": "kb_9",
+    "title": "Gratitude Practice",
+    "tags": [
+      "gratitude",
+      "positivity",
+      "depression"
+    ],
+    "content": "Write down 3 things you're grateful for each day. This shifts focus toward positive aspects of life and can improve mood over time."
+  },
+  {
+    "id": "kb_10",
+    "title": "Setting Boundaries",
+    "tags": [
+      "boundaries",
+      "relationships",
+      "stress"
+    ],
+    "content": "It's okay to say no. Protect your time and energy by setting clear boundaries with others. Communicate your limits respectfully but firmly."
+  },
+  {
+    "id": "kb_11",
+    "title": "Physical Exercise for Mental Health",
+    "tags": [
+      "exercise",
+      "mood",
+      "anxiety"
+    ],
+    "content": "Even 20 minutes of moderate exercise can boost mood and reduce anxiety. Try walking, yoga, dancing, or any movement you enjoy."
+  },
+  {
+    "id": "kb_12",
+    "title": "Limiting Social Media",
+    "tags": [
+      "digital-wellness",
+      "comparison",
+      "anxiety"
+    ],
+    "content": "Set time limits on social media use. Constant comparison and information overload can increase anxiety and decrease self-esteem."
+  },
+  {
+    "id": "kb_13",
+    "title": "Self-Compassion Practice",
+    "tags": [
+      "self-compassion",
+      "kindness",
+      "self-criticism"
+    ],
+    "content": "Treat yourself with the same kindness you'd offer a friend. Replace self-criticism with understanding: 'I'm doing my best' or 'It's okay to struggle.'"
+  },
+  {
+    "id": "kb_14",
+    "title": "Crisis Resources",
+    "tags": [
+      "crisis",
+      "emergency",
+      "support"
+    ],
+    "content": "If you're in crisis: Call 988 (Suicide & Crisis Lifeline) in the US, or contact local emergency services. You can also text 'HELLO' to 741741 (Crisis Text Line)."
+  },
+  {
+    "id": "kb_15",
+    "title": "Professional Help",
+    "tags": [
+      "therapy",
+      "professional",
+      "support"
+    ],
+    "content": "Consider speaking with a mental health professional. Therapy provides personalized support and evidence-based strategies. Many offer online sessions and sliding-scale fees."
+  },
+  {
+    "id": "kb_16",
+    "title": "Mindful Breathing",
+    "tags": [
+      "breathing",
+      "mindfulness",
+      "calm"
+    ],
+    "content": "Focus on your breath for 2-3 minutes. Notice the sensation of air entering and leaving your body. When your mind wanders, gently return focus to your breath."
+  },
+  {
+    "id": "kb_17",
+    "title": "Breaking Tasks into Steps",
+    "tags": [
+      "productivity",
+      "overwhelm",
+      "depression"
+    ],
+    "content": "When overwhelmed, break large tasks into tiny, manageable steps. Focus on just the next small action rather than the entire project."
+  },
+  {
+    "id": "kb_18",
+    "title": "Healthy Routine",
+    "tags": [
+      "routine",
+      "structure",
+      "wellness"
+    ],
+    "content": "Establish a daily routine with regular meal times, sleep schedule, and activities. Structure provides stability and can reduce anxiety and depression."
   }
 ]

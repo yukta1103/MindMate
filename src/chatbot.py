@@ -42,8 +42,13 @@ class MindMateBot:
         self.retriever = RagRetriever()
         self.use_openai = use_openai and (OpenAI is not None)
 
+        api_key = os.getenv("OPENAI_API_KEY")
+        if self.use_openai and not api_key:
+            print("⚠️ REMINDER: OPENAI_API_KEY not found in .env file. Falling back to template mode.")
+            self.use_openai = False
+            
         if self.use_openai:
-            self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+            self.client = OpenAI(api_key=api_key)
 
     def respond(self, message: str) -> Dict:
         # 1) Emotion detection
@@ -67,12 +72,30 @@ class MindMateBot:
             answer = resp.choices[0].message.content.strip()
         else:
             # Fallback simple template (no external LLM)
-            answer = (
-                "I hear you. Based on what you shared, here are a couple of practical steps:\n"
-                f"- {kb_snippets[0] if kb_snippets else 'Try a brief breathing exercise.'}\n"
-                f"- {kb_snippets[1] if len(kb_snippets) > 1 else 'Consider reframing the thought compassionately.'}\n"
-                "If this feels overwhelming, it can help to talk with a trusted friend or professional."
-            )
+            # Differentiate response based on top emotion
+            primary_emotion = top_emotions[0] if top_emotions else "neutral"
+            
+            positive_emotions = {"joy", "love", "admiration", "approval", "caring", "excitement", "gratitude", "optimism", "pride", "relief"}
+            negative_emotions = {"sadness", "anger", "fear", "annoyance", "disappointment", "grief", "remorse", "nervousness"}
+            
+            if primary_emotion in positive_emotions:
+                answer = (
+                    f"That sounds meaningful! It seems like you're feeling {primary_emotion}.\n"
+                    "It's great to acknowledge these moments. Is there anything specific that made you feel this way?"
+                )
+            elif primary_emotion in negative_emotions:
+                answer = (
+                    f"I hear you. It sounds like you might be dealing with {primary_emotion}. "
+                    "Based on what you shared, here are a couple of practical steps that might help:\n"
+                    f"- **{kb_snippets[0] if kb_snippets else 'Take a mindful pause'}**: {kb_snippets[0] if kb_snippets else 'Focus on your breath for a few moments.'}\n"
+                    f"- **{kb_snippets[1] if len(kb_snippets) > 1 else 'Reflect'}**: {kb_snippets[1] if len(kb_snippets) > 1 else 'Be gentle with yourself right now.'}\n"
+                    "\nRemember, I'm here to listen."
+                )
+            else:
+                answer = (
+                    "Thank you for sharing that with me. "
+                    "How has this been affecting you lately? I'm here to listen if you'd like to explore it further."
+                )
 
         return {
             "answer": answer,

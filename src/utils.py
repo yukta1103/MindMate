@@ -6,7 +6,7 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
 DEFAULT_EMOTION_MODEL_DIR = "models/emotion_model"  # after training
 # Pre-trained model as fallback
-PRETRAINED_MODEL = "joeddav/distilbert-base-uncased-go-emotions"
+PRETRAINED_MODEL = "SamLowe/roberta-base-go_emotions"
 
 def load_emotion_pipeline(model_path=DEFAULT_EMOTION_MODEL_DIR, device=None):
     """Load emotion detection model. Uses pre-trained model if local model doesn't exist."""

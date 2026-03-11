@@ -6,7 +6,6 @@ Quick test of the chatbot functionality without the Streamlit UI.
 import sys
 from pathlib import Path
 
-# Add src to path
 root = Path(__file__).resolve().parent
 sys.path.append(str(root / "src"))
 
@@ -18,12 +17,10 @@ def main():
     print("=" * 60)
     print()
     
-    # Initialize bot in fallback mode (no OpenAI)
     print("Initializing MindMate bot...")
     bot = MindMateBot(use_openai=False)
     print("✓ Bot initialized successfully!\n")
     
-    # Test queries
     test_queries = [
         "I'm feeling anxious about my upcoming exam",
         "I can't sleep at night",

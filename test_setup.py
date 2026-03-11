@@ -7,7 +7,6 @@ Run this before starting the Streamlit app to ensure everything is set up.
 import sys
 from pathlib import Path
 
-# Add src to path
 root = Path(__file__).resolve().parent
 sys.path.append(str(root / "src"))
 
@@ -37,7 +36,6 @@ def test_emotion_detection():
         tokenizer, model, id2label, device = load_emotion_pipeline()
         print(f"✓ Emotion model loaded successfully (device: {device})")
         
-        # Test prediction
         test_text = "I'm feeling anxious about my exam tomorrow"
         idx_scores = predict_emotions(test_text, tokenizer, model, device)
         named = map_emotion_names(idx_scores, id2label)
@@ -59,7 +57,6 @@ def test_rag_retrieval():
         retriever = RagRetriever()
         print(f"✓ RAG retriever initialized with {len(retriever.docs)} knowledge base entries")
         
-        # Test search
         query = "I'm feeling anxious"
         results = retriever.search(query, k=3)
         
@@ -77,11 +74,9 @@ def test_chatbot():
     try:
         from chatbot import MindMateBot
         
-        # Test without OpenAI (fallback mode)
         bot = MindMateBot(use_openai=False)
         print("✓ Chatbot initialized (fallback mode)")
         
-        # Test response
         test_message = "I'm feeling stressed about work"
         result = bot.respond(test_message)
         
